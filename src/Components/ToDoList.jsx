@@ -2,7 +2,7 @@ import ToDoItem from './ToDoItem';
 
 function ToDoList({ todos, onToggle, onDelete, onEdit, onStartEdit }) {
   return (
-    <ul className="todo-list">
+    <ul className="flex flex-col m-2 p-5">
       {todos.map(todo => (
         <ToDoItem
           key={todo.id}

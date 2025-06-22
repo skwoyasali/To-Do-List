@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Header from './components/Header';
-import ToDoList from './components/ToDoList';
-import './index.css';
+import Header from './Components/Header';
+import ToDoList from './Components/ToDoList';
+import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -33,15 +33,18 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto p-4 space-y-4 bg-gray-100 rounded shadow">
       <Header />
-      <div className="input-area">
+      <div className="flex flex-col sm:flex-row items-center w-full space-y-2 sm:space-y-0 sm:space-x-2">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Add a new task"
+          className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-        <button onClick={addTodo}>Add</button>
+        <button onClick={addTodo} 
+        className="w-full sm:w-auto bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 cursor-pointer"
+        >Add</button>
       </div>
       <ToDoList
         todos={todos}
