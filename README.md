@@ -38,3 +38,12 @@ src/
 ├── App.jsx
 ├── index.css
 └── main.jsx
+
+Follow these steps to run the project locally on your machine:
+1. Clone the Git Repository
+   git clone https://github.com/skwoyasali/To-Do-List
+   cd To-Do-List
+2. Install Dependencies Make sure you have Node.js and npm installed. Then run:
+   npm install 
+3. Start the Development Server
+   npm run dev
